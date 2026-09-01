@@ -127,4 +127,11 @@ with gr.Blocks(title="Video Background Remover") as demo:
     run = gr.Button("Remove Background", variant="primary")
     run.click(process_video, [video, mode, bg_color, gr.State("auto")], output)
 
-demo.launch()
+import os
+
+port = int(os.environ.get("PORT", 10000))
+
+demo.launch(
+    server_name="0.0.0.0",
+        server_port=port
+        )
