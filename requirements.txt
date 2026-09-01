@@ -1,0 +1,5 @@
+gradio>=5.0
+opencv-python>=4.10
+rembg>=2.0.60
+onnxruntime>=1.19
+numpy>=1.26
